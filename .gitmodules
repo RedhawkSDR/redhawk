@@ -1,0 +1,27 @@
+[submodule "redhawk/core"]
+	path = redhawk/core
+	url = https://github.com/redhawksdr/framework-core.git
+[submodule "redhawk/bulkioInterfaces"]
+	path = redhawk/bulkioInterfaces
+	url = https://github.com/redhawksdr/framework-bulkioInterfaces.git
+[submodule "redhawk/GPP"]
+	path = redhawk/GPP
+	url = https://github.com/redhawksdr/framework-GPP
+[submodule "eclipse-mil.jpeojtrs.sca"]
+	path = redhawk-ide/eclipse-mil.jpeojtrs.sca
+	url = https://github.com/redhawksdr/eclipse-mil.jpeojtrs.sca.git
+[submodule "eclipse-gov.redhawk.core"]
+	path = redhawk-ide/eclipse-gov.redhawk.core
+	url = https://github.com/redhawksdr/eclipse-gov.redhawk.core.git
+[submodule "eclipse-gov.redhawk.ide"]
+	path = redhawk-ide/eclipse-gov.redhawk.ide
+	url = https://github.com/redhawksdr/eclipse-gov.redhawk.ide.git
+[submodule "eclipse-gov.redhawk.codegen"]
+	path = redhawk-ide/eclipse-gov.redhawk.codegen
+	url = https://github.com/redhawksdr/eclipse-gov.redhawk.codegen.git
+[submodule "eclipse-products-gov.redhawk.explorer.product"]
+	path = redhawk-ide/eclipse-products-gov.redhawk.explorer.product
+	url = https://github.com/redhawksdr/eclipse-products-gov.redhawk.explorer.product.git
+[submodule "eclipse-products-gov.redhawk.ide.product"]
+	path = redhawk-ide/eclipse-products-gov.redhawk.ide.product
+	url = https://github.com/redhawksdr/eclipse-products-gov.redhawk.ide.product.git
