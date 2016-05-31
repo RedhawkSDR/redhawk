@@ -25,3 +25,12 @@
 [submodule "eclipse-products-gov.redhawk.ide.product"]
 	path = redhawk-ide/eclipse-products-gov.redhawk.ide.product
 	url = https://github.com/redhawksdr/eclipse-products-gov.redhawk.ide.product.git
+[submodule "redhawk/frontendInterfaces"]
+	path = redhawk/frontendInterfaces
+	url = https://github.com/redhawksdr/frontendInterfaces.git
+[submodule "redhawk/code-generator"]
+	path = redhawk/code-generator
+	url = https://github.com/redhawksdr/framework-codegen.git
+[submodule "burstioInterfaces"]
+	path = redhawk/burstioInterfaces
+	url = git@github.com:RedhawkSDR/burstioInterfaces.git
