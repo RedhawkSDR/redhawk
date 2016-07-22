@@ -1,147 +1,147 @@
 [submodule "redhawk/core"]
 	path = redhawk/core
-	url = ../../redhawksdr/framework-core.git
+	url = ../framework-core.git
 [submodule "redhawk/bulkioInterfaces"]
 	path = redhawk/bulkioInterfaces
-	url = ../../redhawksdr/framework-bulkioInterfaces.git
+	url = ../framework-bulkioInterfaces.git
 [submodule "redhawk/GPP"]
 	path = redhawk/GPP
-	url = ../../redhawksdr/framework-GPP
+	url = ../framework-GPP
 [submodule "eclipse-mil.jpeojtrs.sca"]
 	path = redhawk-ide/mil.jpeojtrs.sca
-	url = ../../redhawksdr/eclipse-mil.jpeojtrs.sca.git
+	url = ../eclipse-mil.jpeojtrs.sca.git
 [submodule "eclipse-gov.redhawk.core"]
 	path = redhawk-ide/gov.redhawk.core
-	url = ../../redhawksdr/eclipse-gov.redhawk.core.git
+	url = ../eclipse-gov.redhawk.core.git
 [submodule "eclipse-gov.redhawk.ide"]
 	path = redhawk-ide/gov.redhawk.ide
-	url = ../../redhawksdr/eclipse-gov.redhawk.ide.git
+	url = ../eclipse-gov.redhawk.ide.git
 [submodule "eclipse-gov.redhawk.codegen"]
 	path = redhawk-ide/gov.redhawk.codegen
-	url = ../../redhawksdr/eclipse-gov.redhawk.codegen.git
+	url = ../eclipse-gov.redhawk.codegen.git
 [submodule "eclipse-products-gov.redhawk.explorer.product"]
 	path = redhawk-ide/gov.redhawk.explorer.product
-	url = ../../redhawksdr/eclipse-products-gov.redhawk.explorer.product.git
+	url = ../eclipse-products-gov.redhawk.explorer.product.git
 [submodule "eclipse-products-gov.redhawk.ide.product"]
 	path = redhawk-ide/gov.redhawk.ide.product
-	url = ../../redhawksdr/eclipse-products-gov.redhawk.ide.product.git
+	url = ../eclipse-products-gov.redhawk.ide.product.git
 [submodule "redhawk/frontendInterfaces"]
 	path = redhawk/frontendInterfaces
-	url = ../../redhawksdr/frontendInterfaces.git
+	url = ../frontendInterfaces.git
 [submodule "redhawk/code-generator"]
 	path = redhawk/code-generator
-	url = ../../redhawksdr/framework-codegen.git
+	url = ../framework-codegen.git
 [submodule "burstioInterfaces"]
 	path = redhawk/burstioInterfaces
-	url = ../../redhawksdr/burstioInterfaces.git
+	url = ../burstioInterfaces.git
 [submodule "redhawk-components/agc"]
 	path = redhawk-components/agc
-	url = ../../redhawksdr/agc.git
+	url = ../agc.git
 [submodule "redhawk-components/AmFmPmBasebandDemod"]
 	path = redhawk-components/AmFmPmBasebandDemod
-	url = ../../redhawksdr/AmFmPmBasebandDemod.git
+	url = ../AmFmPmBasebandDemod.git
 [submodule "redhawk-components/ArbitraryRateResampler"]
 	path = redhawk-components/ArbitraryRateResampler
-	url = ../../redhawksdr/ArbitraryRateResampler.git
+	url = ../ArbitraryRateResampler.git
 [submodule "redhawk-components/autocorrelate"]
 	path = redhawk-components/autocorrelate
-	url = ../../redhawksdr/autocorrelate.git
+	url = ../autocorrelate.git
 [submodule "redhawk-components/DataConverter"]
 	path = redhawk-components/DataConverter
-	url = ../../redhawksdr/DataConverter.git
+	url = ../DataConverter.git
 [submodule "redhawk-components/fastfilter"]
 	path = redhawk-components/fastfilter
-	url = ../../redhawksdr/fastfilter.git
+	url = ../fastfilter.git
 [submodule "redhawk-components/fcalc"]
 	path = redhawk-components/fcalc
-	url = ../../redhawksdr/fcalc.git
+	url = ../fcalc.git
 [submodule "redhawk-components/HardLimit"]
 	path = redhawk-components/HardLimit
-	url = ../../redhawksdr/HardLimit.git
+	url = ../HardLimit.git
 [submodule "redhawk-components/psd"]
 	path = redhawk-components/psd
-	url = ../../redhawksdr/psd.git
+	url = ../psd.git
 [submodule "redhawk-components/SigGen"]
 	path = redhawk-components/SigGen
-	url = ../../redhawksdr/SigGen.git
+	url = ../SigGen.git
 [submodule "redhawk-components/sinksocket"]
 	path = redhawk-components/sinksocket
-	url = ../../redhawksdr/sinksocket.git
+	url = ../sinksocket.git
 [submodule "redhawk-components/sourcesocket"]
 	path = redhawk-components/sourcesocket
-	url = ../../redhawksdr/sourcesocket.git
+	url = ../sourcesocket.git
 [submodule "redhawk-components/SinkVITA49"]
 	path = redhawk-components/SinkVITA49
-	url = ../../redhawksdr/SinkVITA49.git
+	url = ../SinkVITA49.git
 [submodule "redhawk-components/SourceVITA49"]
 	path = redhawk-components/SourceVITA49
-	url = ../../redhawksdr/SourceVITA49.git
+	url = ../SourceVITA49.git
 [submodule "redhawk-components/TuneFilterDecimate"]
 	path = redhawk-components/TuneFilterDecimate
-	url = ../../redhawksdr/TuneFilterDecimate.git
+	url = ../TuneFilterDecimate.git
 [submodule "redhawk-devices/USRP_UHD"]
 	path = redhawk-devices/USRP_UHD
-	url = ../../redhawksdr/USRP_UHD.git
+	url = ../USRP_UHD.git
 [submodule "redhawk-sharedlibs/dsp"]
 	path = redhawk-sharedlibs/dsp
-	url = ../../redhawksdr/dsp.git
+	url = ../dsp.git
 [submodule "redhawk-sharedlibs/fftlib"]
 	path = redhawk-sharedlibs/fftlib
-	url = ../../redhawksdr/fftlib.git
+	url = ../fftlib.git
 [submodule "redhawk-sharedlibs/RedhawkDevUtils"]
 	path = redhawk-sharedlibs/RedhawkDevUtils
-	url = ../../redhawksdr/RedhawkDevUtils.git
+	url = ../RedhawkDevUtils.git
 [submodule "redhawk-sharedlibs/VITA49Libraries"]
 	path = redhawk-sharedlibs/VITA49Libraries
-	url = ../../redhawksdr/VITA49Libraries.git
+	url = ../VITA49Libraries.git
 [submodule "redhawk-dependencies/librtlsdr"]
 	path = redhawk-dependencies/librtlsdr
-	url = ../../redhawksdr/librtlsdr.git
+	url = ../librtlsdr.git
 [submodule "redhawk-devices/RTL2832U"]
 	path = redhawk-devices/RTL2832U
-	url = ../../redhawksdr/RTL2832U.git
+	url = ../RTL2832U.git
 [submodule "redhawk-ide/redhawk-ide-uitests"]
 	path = redhawk-ide/redhawk-ide-uitests
-	url = ../../redhawksdr/redhawk-ide-uitests
+	url = ../redhawk-ide-uitests
 [submodule "redhawk-ide/mvn-parent"]
 	path = redhawk-ide/mvn-parent
-	url = ../../redhawksdr/mvn-parent
+	url = ../mvn-parent
 [submodule "redhawk-components/FileReader"]
 	path = redhawk-components/FileReader
-	url = ../../redhawksdr/FileReader.git
+	url = ../FileReader.git
 [submodule "redhawk-components/FileWriter"]
 	path = redhawk-components/FileWriter
-	url = ../../redhawksdr/FileWriter.git
+	url = ../FileWriter.git
 [submodule "redhawk-components/RBDSDecoder"]
 	path = redhawk-components/RBDSDecoder
-	url = ../../redhawksdr/RBDSDecoder.git
+	url = ../RBDSDecoder.git
 [submodule "redhawk-components/psk_soft"]
 	path = redhawk-components/psk_soft
-	url = ../../redhawksdr/psk_soft.git
+	url = ../psk_soft.git
 [submodule "redhawk-devices/FmRdsSimulator"]
 	path = redhawk-devices/FmRdsSimulator
-	url = ../../redhawksdr/FmRdsSimulator.git
+	url = ../FmRdsSimulator.git
 [submodule "redhawk-dependencies/libRfSimulators"]
 	path = redhawk-dependencies/libRfSimulators
-	url = ../../redhawksdr/libRfSimulators.git
+	url = ../libRfSimulators.git
 [submodule "redhawk-sharedlibs/blueFileLib"]
 	path = redhawk-sharedlibs/blueFileLib
-	url = ../../redhawksdr/blueFileLib.git
+	url = ../blueFileLib.git
 [submodule "redhawk-waveforms/FM_RBDS_demo"]
 	path = redhawk-waveforms/FM_RBDS_demo
-	url = ../../redhawksdr/FM_RBDS_demo.git
+	url = ../FM_RBDS_demo.git
 [submodule "redhawk-waveforms/FM_mono_demo"]
 	path = redhawk-waveforms/FM_mono_demo
-	url = ../../redhawksdr/FM_mono_demo.git
+	url = ../FM_mono_demo.git
 [submodule "redhawk-waveforms/basic_components_demo"]
 	path = redhawk-waveforms/basic_components_demo
-	url = ../../redhawksdr/basic_components_demo.git
+	url = ../basic_components_demo.git
 [submodule "redhawk-waveforms/short_file_to_float_file"]
 	path = redhawk-waveforms/short_file_to_float_file
-	url = ../../redhawksdr/short_file_to_float_file.git
+	url = ../short_file_to_float_file.git
 [submodule "redhawk-waveforms/socket_loopback_demo"]
 	path = redhawk-waveforms/socket_loopback_demo
-	url = ../../redhawksdr/socket_loopback_demo.git
+	url = ../socket_loopback_demo.git
 [submodule "redhawk-waveforms/vita49_loopback_demo"]
 	path = redhawk-waveforms/vita49_loopback_demo
-	url = ../../redhawksdr/vita49_loopback_demo.git
+	url = ../vita49_loopback_demo.git
