@@ -24,5 +24,6 @@ The REDHAWK integrated development environment (IDE) provides tools to support d
 * Adding Python operators and Java methods to simplify common arithmetic operations on BulkIO time stamps
 * Addressing numerous Discrepancy Reports (DRs)
 
+**[Release of REDHAWK 2.0.0](https://github.com/redhawksdr/redhawk/releases/tag/2.0.0) (December 10, 2016)**
 ## Copyrights
 This work is protected by Copyright. Please refer to the [Copyright File](COPYRIGHT) for updated copyright information.
