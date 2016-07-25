@@ -12,18 +12,26 @@ The REDHAWK integrated development environment (IDE) provides tools to support d
 * Fixed initial configuration of overridden property values
 * Fixed several bugs with recording timer
 
-**[Release of USRP_UHD 3.0.2 for the REDHAWK 1.10 series](https://github.com/redhawksdr/USRP_UHD/releases/tag/3.0.2) (May 11, 2016)** - The effort in the USRP_UHD 3.0.2 release focused on resolving the following issues in the USRP_UHD:
+**[Release of USRP_UHD 3.0.2 for the REDHAWK 1.10 series](https://github.com/redhawksdr/USRP_UHD/releases/tag/3.0.2) (May 11, 2016)** - USRP_UHD 3.0.2 resolves the following issues:
 
 * Fixed error causing invalid SRI to be sent for all allocations after the initial allocation
 * Added node-config script to the DeviceAdded node-config script to the Device
 * Fixed error causing Ubuntu build failure
 
-**[Release of REDHAWK 2.0.1](https://github.com/redhawksdr/redhawk/releases/tag/2.0.1) (April 15, 2016)** - Download the new Core Framework, IDE, and documentation from our Downloads page. The effort in REDHAWK 2.0.1 focused on:
+**[Release of REDHAWK 2.0.1](https://github.com/redhawksdr/redhawk/releases/tag/2.0.1) (April 15, 2016)** - The effort in REDHAWK 2.0.1 focused on:
 
 * Enhancing the level of control that a system deployer has to customize the reservation schema used to manage computing resources
 * Adding Python operators and Java methods to simplify common arithmetic operations on BulkIO time stamps
 * Addressing numerous Discrepancy Reports (DRs)
 
-**[Release of REDHAWK 2.0.0](https://github.com/redhawksdr/redhawk/releases/tag/2.0.0) (December 10, 2016)**
+**[Release of REDHAWK 2.0.0](https://github.com/redhawksdr/redhawk/releases/tag/2.0.0) (December 10, 2016)** - The effort in REDHAWK 2.0.0 focused on improving system management, establishing a core set of REDHAWK assets, and enhancing the IDE user experience, including:
+
+* improving processing performance
+* promoting consistency among core assets
+* improving and focusing on a comprehensive set of core assets, including the addition of Waveforms
+* providing an improved user experience by re-implementing IDE diagrams for Waveforms and Nodes
+* adding IDE support for REDHAWK shared library projects
+* adding IDE support for differentiating projects with namespaces
+
 ## Copyrights
 This work is protected by Copyright. Please refer to the [Copyright File](COPYRIGHT) for updated copyright information.
