@@ -6,6 +6,10 @@ REDHAWK is a software-defined radio (SDR) framework designed to support the deve
 The REDHAWK integrated development environment (IDE) provides tools to support development of REDHAWK software. The development and deployment of REDHAWK Applications are aided by graphical editors and drag-and-drop Waveform construction. The IDE allows users to interact with and control multiple running REDHAWK instances and applications.
 
 ## Recent Announcements
+**[Release of TuneFilterDecimate 2.0.1 for the REDHAWK 2.0 series](https://github.com/RedhawkSDR/TuneFilterDecimate/releases/tag/2.0.1) (July 29, 2016)** - TuneFilterDecimate 2.0.1 resolves the following issue:
+
+* Fixed calculation of SRI keyword `CHAN_RF` for tuning mode `NORM`
+
 **[Release of FileWriter 4.0.2 for the REDHAWK 2.0 series](https://github.com/redhawksdr/FileWriter/releases/tag/4.0.2) (July 5, 2016)** - FileWriter 4.0.2 resolves the following issues:
 
 * Fixed feature that starts a new file following a retune
