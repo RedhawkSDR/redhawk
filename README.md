@@ -6,6 +6,12 @@ REDHAWK is a software-defined radio (SDR) framework designed to support the deve
 The REDHAWK integrated development environment (IDE) provides tools to support development of REDHAWK software. The development and deployment of REDHAWK Applications are aided by graphical editors and drag-and-drop Waveform construction. The IDE allows users to interact with and control multiple running REDHAWK instances and applications.
 
 ## Recent Announcements
+**[Release of REDHAWK 2.0.3](https://github.com/redhawksdr/redhawk/releases/tag/2.0.3) (October 5, 2016)** - REDHAWK 2.0.3 addresses the following:
+
+* Improvements to GPP automatic resource monitoring caused a memory leak. - Fixed.
+* Incorrect return type in the GPS interface implementation of FrontEnd Interfaces. - Fixed.
+* Python Devices failed to launch when a logging config file is specified. - Fixed.
+
 **[Release of REDHAWK 2.0.2](https://github.com/redhawksdr/redhawk/releases/tag/2.0.2) (September 1, 2016)** - The effort in REDHAWK 2.0.2 focused on:
 
 * Improving how error messages are displayed to the user in the IDE
