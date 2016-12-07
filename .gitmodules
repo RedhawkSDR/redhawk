@@ -1,12 +1,3 @@
-[submodule "redhawk/core"]
-	path = redhawk/core
-	url = ../framework-core.git
-[submodule "redhawk/bulkioInterfaces"]
-	path = redhawk/bulkioInterfaces
-	url = ../framework-bulkioInterfaces.git
-[submodule "redhawk/GPP"]
-	path = redhawk/GPP
-	url = ../framework-GPP
 [submodule "eclipse-mil.jpeojtrs.sca"]
 	path = redhawk-ide/mil.jpeojtrs.sca
 	url = ../eclipse-mil.jpeojtrs.sca.git
@@ -25,15 +16,6 @@
 [submodule "eclipse-products-gov.redhawk.ide.product"]
 	path = redhawk-ide/gov.redhawk.ide.product
 	url = ../eclipse-products-gov.redhawk.ide.product.git
-[submodule "redhawk/frontendInterfaces"]
-	path = redhawk/frontendInterfaces
-	url = ../frontendInterfaces.git
-[submodule "redhawk/code-generator"]
-	path = redhawk/code-generator
-	url = ../framework-codegen.git
-[submodule "burstioInterfaces"]
-	path = redhawk/burstioInterfaces
-	url = ../burstioInterfaces.git
 [submodule "redhawk-components/agc"]
 	path = redhawk-components/agc
 	url = ../agc.git
@@ -145,3 +127,6 @@
 [submodule "redhawk-waveforms/vita49_loopback_demo"]
 	path = redhawk-waveforms/vita49_loopback_demo
 	url = ../vita49_loopback_demo.git
+[submodule "redhawk-core-framework"]
+	path = redhawk-core-framework
+	url = ../core-framework.git
