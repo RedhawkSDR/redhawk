@@ -130,3 +130,9 @@
 [submodule "redhawk-core-framework"]
 	path = redhawk-core-framework
 	url = ../core-framework.git
+[submodule "redhawk-components/SinkSDDS"]
+	path = redhawk-components/SinkSDDS
+	url = ../SinkSDDS
+[submodule "redhawk-components/SourceSDDS"]
+	path = redhawk-components/SourceSDDS
+	url = ../SourceSDDS

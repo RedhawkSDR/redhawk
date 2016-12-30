@@ -6,6 +6,20 @@ REDHAWK is a software-defined radio (SDR) framework designed to support the deve
 The REDHAWK integrated development environment (IDE) provides tools to support development of REDHAWK software. The development and deployment of REDHAWK Applications are aided by graphical editors and drag-and-drop Waveform construction. The IDE allows users to interact with and control multiple running REDHAWK instances and applications.
 
 ## Recent Announcements
+**[Release of REDHAWK 2.0.4](https://github.com/redhawksdr/redhawk/releases/tag/2.0.4) (December 2016)** - The effort in REDHAWK 2.0.4 focused on:
+
+* Adding support for the CentOS 7 operating system.
+* Updating the REDHAWK IDE to require Java 8.
+* Adding support for two new Core Assets, SinkSDDS and SourceSDDS, which convert between SDDS and BulkIO data formats.
+* Adding messages to indicate to the user the reason why the GPP is busy.
+* Adding more IDE XML validation to help users catch issues sooner when designing projects.
+* Correcting issues with Redhawk-generated build scripts that prevented errors from being displayed.
+* Adding 'Connect' and 'Show Properties View' in the Graphiti diagram context menus.
+* Adding GPP label to the Domain Manager log message when deploying Components or Waveforms to enable quick identification of which GPP the Domain Manager is attempting to launch Components on.
+* Improving the REDHAWK Explorer product to use the new Graphiti diagrams introduced in the REDHAWK 2.0.0 IDE.
+* Improving IDE namespace support to give users an error if they have multiple resources with conflicting IDs in the SDRROOT.
+* Addressing numerous bug fixes.
+
 **[Release of REDHAWK 2.0.3](https://github.com/redhawksdr/redhawk/releases/tag/2.0.3) (October 5, 2016)** - REDHAWK 2.0.3 addresses the following:
 
 * Improvements to GPP automatic resource monitoring caused a memory leak. - Fixed.
