@@ -6,6 +6,15 @@ REDHAWK is a software-defined radio (SDR) framework designed to support the deve
 The REDHAWK integrated development environment (IDE) provides tools to support development of REDHAWK software. The development and deployment of REDHAWK Applications are aided by graphical editors and drag-and-drop Waveform construction. The IDE allows users to interact with and control multiple running REDHAWK instances and applications.
 
 ## Recent Announcements
+**[Release of REDHAWK 2.0.5](https://github.com/redhawksdr/redhawk/releases/tag/2.0.5) (February 24, 2016)** - The effort in REDHAWK 2.0.5 focused on:
+
+* Maintaining the correct time stamp when pushing data from the Sandbox DataSource.
+* Improving a Component's response to messages irrespective of whether or not the Component is started or stopped.
+* Improving FileSink support for framed data and timecode with BLUE file output.
+* Improving the handling of missing event message fields in C++ and Python.
+* Ensuring external Port names are recognized.
+* Addressing numerous bug fixes.
+
 **[Release of REDHAWK 2.0.4](https://github.com/redhawksdr/redhawk/releases/tag/2.0.4) (December 30, 2016)** - The effort in REDHAWK 2.0.4 focused on:
 
 * Adding support for the CentOS 7 operating system.
@@ -33,37 +42,6 @@ The REDHAWK integrated development environment (IDE) provides tools to support d
 * Providing better awareness of resource utilization on the host computer
 * Adding better support for creating FEI Devices written in Python
 * Addressing numerous Discrepancy Reports (DRs)
-
-**[Release of TuneFilterDecimate 2.0.1 for the REDHAWK 2.0 series](https://github.com/RedhawkSDR/TuneFilterDecimate/releases/tag/2.0.1) (July 29, 2016)** - TuneFilterDecimate 2.0.1 resolves the following issue:
-
-* Fixed calculation of SRI keyword `CHAN_RF` for tuning mode `NORM`
-
-**[Release of FileWriter 4.0.2 for the REDHAWK 2.0 series](https://github.com/redhawksdr/FileWriter/releases/tag/4.0.2) (July 5, 2016)** - FileWriter 4.0.2 resolves the following issues:
-
-* Fixed feature that starts a new file following a retune
-* Fixed initial configuration of overridden property values
-* Fixed several bugs with recording timer
-
-**[Release of USRP_UHD 3.0.2 for the REDHAWK 1.10 series](https://github.com/redhawksdr/USRP_UHD/releases/tag/3.0.2) (May 11, 2016)** - USRP_UHD 3.0.2 resolves the following issues:
-
-* Fixed error causing invalid SRI to be sent for all allocations after the initial allocation
-* Added node-config script to the DeviceAdded node-config script to the Device
-* Fixed error causing Ubuntu build failure
-
-**[Release of REDHAWK 2.0.1](https://github.com/redhawksdr/redhawk/releases/tag/2.0.1) (April 15, 2016)** - The effort in REDHAWK 2.0.1 focused on:
-
-* Enhancing the level of control that a system deployer has to customize the reservation schema used to manage computing resources
-* Adding Python operators and Java methods to simplify common arithmetic operations on BulkIO time stamps
-* Addressing numerous Discrepancy Reports (DRs)
-
-**[Release of REDHAWK 2.0.0](https://github.com/redhawksdr/redhawk/releases/tag/2.0.0) (December 10, 2016)** - The effort in REDHAWK 2.0.0 focused on improving system management, establishing a core set of REDHAWK assets, and enhancing the IDE user experience, including:
-
-* improving processing performance
-* promoting consistency among core assets
-* improving and focusing on a comprehensive set of core assets, including the addition of Waveforms
-* providing an improved user experience by re-implementing IDE diagrams for Waveforms and Nodes
-* adding IDE support for REDHAWK shared library projects
-* adding IDE support for differentiating projects with namespaces
 
 ## Copyrights
 This work is protected by Copyright. Please refer to the [Copyright File](COPYRIGHT) for updated copyright information.
