@@ -136,3 +136,6 @@
 [submodule "redhawk-components/SourceSDDS"]
 	path = redhawk-components/SourceSDDS
 	url = ../SourceSDDS
+[submodule "redhawk-dependencies/omniEvents"]
+	path = redhawk-dependencies/omniEvents
+	url = ../omniEvents
