@@ -139,3 +139,6 @@
 [submodule "redhawk-dependencies/omniEvents"]
 	path = redhawk-dependencies/omniEvents
 	url = ../omniEvents
+[submodule "redhawk-enterprise-integration"]
+	path = redhawk-enterprise-integration
+	url = ../enterprise
