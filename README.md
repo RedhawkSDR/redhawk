@@ -1,12 +1,61 @@
 # REDHAWK
 ![REDHAWK IDE](images/REDHAWK_ScreenShot_scaled.png)
 ## Description
+
 REDHAWK is a software-defined radio (SDR) framework designed to support the development, deployment, and management of real-time software radio applications. To support the design and development of software applications, REDHAWK provides tools that allow development and testing of software modules called "Components" and composition of Components into "Waveform Applications" that can be seamlessly deployed on a single computer or multiple network-enabled computers.
 
 The REDHAWK integrated development environment (IDE) provides tools to support development of REDHAWK software. The development and deployment of REDHAWK Applications are aided by graphical editors and drag-and-drop Waveform construction. The IDE allows users to interact with and control multiple running REDHAWK instances and applications.
 
 ## Recent Announcements
-**[Release of REDHAWK 2.0.6](https://github.com/redhawksdr/redhawk/releases/tag/2.0.6) (July 2017)** - Download the new Core Framework, IDE, and documentation from our Downloads page. The effort in REDHAWK 2.0.6 focused on:
+
+**[Release of REDHAWK 2.0.7](https://github.com/redhawksdr/redhawk/releases/tag/2.0.7) (September 2017)** - The effort in REDHAWK 2.0.7 focused on:
+
+#### Core Framework
+
+* Resolving soft package dependency issue so DeviceManager resolves run time environment settings when deploying Devices and Services that have soft package dependencies.
+* Resolving issue so that during Application release, calls to the Application object no longer result in misleading errors.
+* Improving flexibility to ignore GPP threshold checks when determining if the GPP should go into a BUSY state.
+* Resolving issue where processes with spaces in the names would cause the GPP to terminate.
+* Resolving issue to allow for slow startup conditions of OmniNames service before starting OmniEvents service.
+* Resolving issue with uninitialized data structures with BulkIO and SourceSDDS that inhibited BulkIO data transfers.
+* Resolving issue with incorrect exception being thrown during allocateCapacity.
+* Resolving issue when shutting down orb from Python resources.
+* Providing a warning in the logs if a message is too large.
+* Resolving issue with the code generators so they can be run on systems with FIPS enabled.
+* Resolving issue so generated C++ FEI Devices do not leak memory when deallocating listeners. Existing Devices must be regenerated and recompiled to apply this fix.
+* Resolving a memory leak in FrontendTunerDevice::create(). Existing Devices must be recompiled to apply this fix.
+* Resolving issue so the functions returnRFInfoPkt transform all fields between types frontend::RFInfoPkt and FRONTEND::RFInfoPkt.
+* Resolving issue so BulkIO input stream calls to read() and tryread() with a sample count do not segfault when their queue contains only an empty packet with EOS set.
+
+#### IDE
+
+* Providing an option in the IDE to perform a FrontEnd Device allocation in the background to aid developers who are debugging their FrontEnd Devices.
+* Adding the Eclipse "TM Terminal" in the IDE, a full-featured terminal emulator that provides full ANSI cursor control, readline, and coloring.
+* Fixing links in the IDE's help contents so REDHAWK help now displays correctly when links within the help are selected.
+* Resolving issue so Diagram shapes no longer stack if they are part of a feedback loop.
+
+#### Documentation
+
+* Adding documentation for developing a logging configuration plug-in that will be used to resolve the LOGGING\_CONFIG\_URI parameter during deployment of Devices, Services and Components.
+* Renaming the Generating Code section to Generating Code for Components and explaining the code generation process and what occurs in the IDE when the code is generated.
+* Updating the REDHAWK User Manual with accessibility rules for all properties. Updating the REDHAWK ICD with the description of the new "property" kind.
+
+#### REDHAWK Enterprise Integration
+
+* Adding toString() method to RedhawkStruct object, ensuring the getAllocIds(RedhawkStruct s) return object is a List, and adding a helper method for retrieving allocIds called getAllocIds().
+* Updating REDHAWK Driver to properly clean up driver-registered Device Managers on shutdown.
+* Adding IDL source to appropriate Core Framework jars. Incorporated additional method to produce jar bundle with manifest built dynamically via the BnD Tools, source jar, and zip of XSDs.
+* Updating REDHAWK Java Driver and REDHAWK REST to make it easier for users to access External Properties in Waveforms.
+* Adding implementations of ConnectionManager, AllocationManager interfaces to REDHAWK Driver. Adding utility methods for programatically setting the log level of Domain, Application, Device, and Component Resources.
+* Adding REST access to Event Channel Manager functionality.
+* Updating REDHAWK Driver to have wrapper methods for retrieving state, connections, activeSRIs, and UsesPortStatistics from BULKIO objects. Updating REDHAWK REST to make connections, activeSRIs, UsesPortStatistics, and state available.
+* Adding wrapper methods to RedhawkApplication and RedhawkComponent interfaces for easier access to aware(), componentDevices(), componentProcessIds(), and componentImplementations(). REST Responses for Component and Application now display componentDevice, aware, componentProcessId, and componentImplementation information.
+* Adding ability to get and set adminState from REDHAWK Driver and REDHAWK REST. Adding ability to view usageState and operationalState from REDHAWK Driver and REDHAWK REST.
+* Adding ability to registerRemoteDomain, unregisterRemoteDomains, get device implementation information and a deviceConfiguration profile via REDHAWK Driver and REDHAWK REST.
+* Preconfiguring HTTPS and WSS in REDHAWK Enterprise Integration and adding Web Server Configuration section in REDHAWK Enterprise Integration User Guide.
+
+
+**[Release of REDHAWK 2.0.6](https://github.com/redhawksdr/redhawk/releases/tag/2.0.6) (July 2017)** -  The effort in REDHAWK 2.0.6 focused on:
 
 * Initial FOSS Release of REDHAWK Enterprise Integration Assets, which provide the ability to interact with REDHAWK in a JRE environment. The REDHAWK Enterprise Integration Assets include:
    * REDHAWK Driver: Provides simplified access to REDHAWK via standard Java interfaces. This Asset shields all interaction with the underlying REDHAWK Components and provides a simplified API for Java developers interacting with a REDHAWK Domain. The REDHAWK Driver can be leveraged as a standalone Java Archive (JAR) file.
@@ -36,42 +85,6 @@ The REDHAWK integrated development environment (IDE) provides tools to support d
 * Updating the Python package to create instances of the same Application for multiple processes or threads without conflicts.
 * Updating the Python Sandbox to make and break connections from multiple threads without conflicts.
 
-**[Release of REDHAWK 2.0.5](https://github.com/redhawksdr/redhawk/releases/tag/2.0.5) (February 24, 2016)** - The effort in REDHAWK 2.0.5 focused on:
-
-* Maintaining the correct time stamp when pushing data from the Sandbox DataSource.
-* Improving a Component's response to messages irrespective of whether or not the Component is started or stopped.
-* Improving FileSink support for framed data and timecode with BLUE file output.
-* Improving the handling of missing event message fields in C++ and Python.
-* Ensuring external Port names are recognized.
-* Addressing numerous bug fixes.
-
-**[Release of REDHAWK 2.0.4](https://github.com/redhawksdr/redhawk/releases/tag/2.0.4) (December 30, 2016)** - The effort in REDHAWK 2.0.4 focused on:
-
-* Adding support for the CentOS 7 operating system.
-* Updating the REDHAWK IDE to require Java 8.
-* Adding support for two new Core Assets, SinkSDDS and SourceSDDS, which convert between SDDS and BulkIO data formats.
-* Adding messages to indicate to the user the reason why the GPP is busy.
-* Adding more IDE XML validation to help users catch issues sooner when designing projects.
-* Correcting issues with Redhawk-generated build scripts that prevented errors from being displayed.
-* Adding 'Connect' and 'Show Properties View' in the Graphiti diagram context menus.
-* Adding GPP label to the Domain Manager log message when deploying Components or Waveforms to enable quick identification of which GPP the Domain Manager is attempting to launch Components on.
-* Improving the REDHAWK Explorer product to use the new Graphiti diagrams introduced in the REDHAWK 2.0.0 IDE.
-* Improving IDE namespace support to give users an error if they have multiple resources with conflicting IDs in the SDRROOT.
-* Addressing numerous bug fixes.
-
-**[Release of REDHAWK 2.0.3](https://github.com/redhawksdr/redhawk/releases/tag/2.0.3) (October 5, 2016)** - REDHAWK 2.0.3 addresses the following:
-
-* Improvements to GPP automatic resource monitoring caused a memory leak. - Fixed.
-* Incorrect return type in the GPS interface implementation of FrontEnd Interfaces. - Fixed.
-* Python Devices failed to launch when a logging config file is specified. - Fixed.
-
-**[Release of REDHAWK 2.0.2](https://github.com/redhawksdr/redhawk/releases/tag/2.0.2) (September 1, 2016)** - The effort in REDHAWK 2.0.2 focused on:
-
-* Improving how error messages are displayed to the user in the IDE
-* Adding new abilities to interact with logging for Components and Devices in the IDE
-* Providing better awareness of resource utilization on the host computer
-* Adding better support for creating FEI Devices written in Python
-* Addressing numerous Discrepancy Reports (DRs)
-
 ## Copyrights
+
 This work is protected by Copyright. Please refer to the [Copyright File](COPYRIGHT) for updated copyright information.
