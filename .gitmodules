@@ -142,3 +142,6 @@
 [submodule "redhawk-enterprise-integration"]
 	path = redhawk-enterprise-integration
 	url = ../enterprise
+[submodule "redhawk-devices/MSDD"]
+	path = redhawk-devices/MSDD
+	url = ../MSDD
