@@ -6,82 +6,63 @@ REDHAWK is a software-defined radio (SDR) framework designed to support the deve
 The REDHAWK integrated development environment (IDE) provides tools to support development of REDHAWK software. The development and deployment of REDHAWK Applications are aided by graphical editors and drag-and-drop Waveform construction. The IDE allows users to interact with and control multiple running REDHAWK instances and applications.
 
 ## Recent Announcements
-### **[Release of REDHAWK 2.1.2](https://github.com/redhawksdr/redhawk/releases/tag/2.1.2) (December 2017)**:
+### **[Release of REDHAWK 2.1.3](https://github.com/redhawksdr/redhawk/releases/tag/2.1.3) (July 2018)**:
 
-### Core REDHAWK Features and APIs
-* Shared address space Components: Significant enhancement of Component model and BULKIO to support high performance I/O. Preliminary developer documentation for the REDHAWK 2.1.1 Beta Release is available at <a href="https://github.com/RedhawkSDR/core-framework/tree/2.1.2/docs/shared-address">https://github.com/RedhawkSDR/core-framework/tree/2.1.2/docs/shared-address</a>. This feature will be under extensive evaluation during the 2.1.x beta release series and is expected to provide the ground work for several new major enhancements to REDHAWK.
-* Implementing a new zero-copy IPC mechanism for BulkIO that uses shared memory to transfer data between two processes on the same host. This is a follow-on enhancement to the shared address space Components feature.
-Preliminary developer documentation for the REDHAWK 2.1.0 beta release is available at <a href="https://github.com/RedhawkSDR/core-framework/tree/2.1.2/docs/shared-memory/shared-memory-ipc.md">https://github.com/RedhawkSDR/core-framework/tree/2.1.2/docs/shared-memory/shared-memory-ipc.md</a>.
-* FrontEnd Interfaces (FEI) Property definition change: For Devices, the FRONTEND::tuner_allocation and FRONTEND::listener_allocation allocation properties are now writeonly instead of readwrite. Because the properties are now created as writeonly, they can no longer be queried. This change was made to prevent confusion with the actual state of the FrontEnd Device, which is reported by the FRONTEND::tuner_status property. Existing Core Asset FEI Devices have been updated with this change. New FrontEnd Devices created with the IDE will automatically have this change.
- * Adding support for a new type of Property, utctime, extending the list that includes types such as short or string. This timestamp Property is used in PropertyChangeEvents and can be queried from Components/Devices with the id QUERY_TIMESTAMP, which is useful when synchronizing the state of the system. utctime can be used by Component/Device developers as an additional type of Property.
-* Adding functionality for capacity to be reserved for an entire host collocation on the SAD file. The reservation is a capacity floor for the Components in the host collocation, where the amount of capacity utilized by the aggregate set of Components is this reservation or actual, whichever is higher. This reservation is allocated against the target GPP running this Application, allowing the GPP to verify that the request can be satisfied, reducing the likelihood of over-subscription.
-* Adding support for DCD files to have a startorder attribute, which functions similarly to the SAD file's startorder. On startup, "start" is automatically called on Devices and Services (when possible), and on shutdown, reverse-order "stop" is called. The IDE's tooling for DCD files has been updated to display and edit startorder.
-* Adding support for the DeviceManager to resolve run time environment settings when deploying Devices and Services that have soft package dependencies.
-* Resolving issue so that during Application release, calls to the Application object no longer result in misleading errors.
-* Adding functionality within the code generators so they create C++, Java, or Python constants for enumerated values defined in the PRF.
-* Improving flexibility to ignore GPP threshold checks when determining if the GPP should go into a BUSY state.
-* Removing some obsolete options from the Core Framework and BulkIO configure scripts.
-* Resolving issue where processes with spaces in the names would cause the GPP to terminate.
-* Resolving issue to allow for slow startup conditions of OmniNames service before starting OmniEvents service.
-* Adding the stop timeout control to the Application. Options, like the stop timeout, can be configured when designing Waveforms in the IDE.
-* Resolving issue with incorrect exception being thrown during allocateCapacity.
-* Resolving issue when shutting down orb from Python resources.
-* Providing a warning in the logs if a message is too large.
-* Resolving issue with the code generators so they can be run on systems with FIPS enabled.
-* Resolving issue so generated C++ FEI Devices do not leak memory when deallocating listeners. Existing Devices must be regenerated and recompiled to apply this fix.
-* Resolving a memory leak in FrontendTunerDevice::create(). Existing Devices must be recompiled to apply this fix.
-* Resolving issue so the function returnRFInfoPkt transforms all fields between types frontend::RFInfoPkt and FRONTEND::RFInfoPkt.
-* Adjusting the default tuner type for the Python Sandbox tuner allocation. It is now RX_DIGITIZER rather than DDC, matching the default tuner for a generated FEI Device.
-* Preventing sb.DataSink from adding an empty timestamp when it receives EOS in an empty packet.
+The effort in REDHAWK 2.1.3 focused on:
 
-### REDHAWK Systems
-* Adding scripts and configuration files that allow REDHAWK core services to run as system services. In addition to these services, integrators can define REDHAWK Waveforms that are deployed during the system boot process.
-
-### Python Tooling and Sandbox
 * Adding snapshot capability of network data and performing SDDS packet analysis on the captured data.
-* Improving Python tooling to help manage REDHAWK systems. For example, these improvements include more intuitive event monitoring as well as new EventChannelManager, AllocationManager, and ConnectionManager helpers.
-* Adding support for debugger options in the Python sandbox for C++ (Valgrind or gdb), Python (pdb), or Java (jdb) Components, Services, or Devices.
-* Improving Python Sandbox tooling for new Domain features and resources. Specifically, extended DataSource to provide access to all the available SRI and the data timestamp.
+* Adding scripts and configuration files that allow REDHAWK core services to run as system services.  In addition to these services, integrators can define REDHAWK waveforms that are deployed during the system boot process.
+* Extending the tool, `rh_net_diag`, to provide read/write/execute permissions checks on directories important for running a REDHAWK system.
+* Changing the default logging directory for omniEvents service to reside in `/var/log/omniEvents`.
+* Changing FrontEnd Interfaces (FEI) property definitions: 
+ * For devices, the `FRONTEND::tuner_allocation` and `FRONTEND::listener_allocation` allocation properties are now writeonly instead of readwrite. Because the properties are now created as writeonly, they can no longer be queried. This change was made to prevent confusion with the actual state of the FrontEnd device, which is reported by the `FRONTEND::tuner_status property`. Existing Core Asset FEI devices have been updated with this change. New FrontEnd devices created with the IDE will automatically have this change.
+* Adding functionality to the IDE so when users edit a property's name, the IDE automatically supplies an appropriate ID for the property based on REDHAWK's naming convention.
+* Adding documentation to the REDHAWK Manual regarding naming elements in structures such that element names can be reused across different structures.
+* Updating the `rh.VITA49` REDHAWK shared library to include support for VITA 49.2. Initial release adheres to the draft specification, revision 00.51 dated 5 Dec 2016, which was available during development.
+* Adding functionality in the IDE to install the diagram layout when installing a SAD/DCD file (either by drag-drop or via its RPM `.spec` file). At runtime, the IDE checks for the diagram layout and if present, preserves the developer's layout.
 * Adding an option to enable the Domain Manager's logging level to be dynamically changed.
-
-### GPP
-* Waveform Metrics support: Application objects now contain a "metrics" function that returns GPP usage metrics for individual Components as well as overall for the Application. Metrics are viewable in the Properties view of the IDE. Waveform metrics can now be accessed in the REDHAWK Driver Java and REST APIs.
-
-### IDE
-* Adding the Components tab to the Waveform editor in the IDE to allow editing of Component instantiation details, including logging configuration. This information will be used to resolve the `LOGGING_CONFIG_URI` parameter during Component deployment.
-* Improving the user experience when locating and connecting to existing REDHAWK Domains.
-* Providing users with the option to copy Properties from other projects in their workspace or choose from pre-defined REDHAWK Properties when developing a Component or Device.
-* Displaying a REDHAWK editor when double-clicking on SCD XML files.
-* Adding a notification that is now displayed after exporting projects to the Target SDR.
-* Providing better support for adding and editing Services in a DCD file.
-* Resolving issue so Diagram shapes no longer stack if they are part of a feedback loop.
-* Removing old code generation templates for REDHAWK 1.8 from the IDE. Old IDE diagrams for Waveforms and Nodes from pre-2.0.0 were also removed.
-
-### Core Assets
-* Creating a new MSDD Device released with bug fixes and enhancements and regenerated for REDHAWK 2.1.
-* Updating the `rh.VITA49` REDHAWK shared library to include support for the VITA 49.2 standard. Initial release adheres to the draft specification, revision 00.51 dated 5 Dec 2016, which was available during development.
-
-### REDHAWK Enterprise Integration
-* Ensuring the `getAllocIds` method return object is a List.
-* Updating REDHAWK Driver to properly clean up driver-registered Device Managers on shutdown.
-* Adding IDL source to appropriate Core Framework jars.
-Incorporated additional method to produce a jar bundle with a manifest built dynamically via the BnD Tools, source jar, and zip of XSDs.
-* Adding implementations of ConnectionManager, AllocationManager interfaces to REDHAWK Driver. Adding utility methods for programatically setting the log level of Domain, Application, Device, and Component resources.
-* Adding REST access to Event Channel Manager functionality.
-* Updating REDHAWK Driver to have wrapper methods for retrieving state, connections, activeSRIs, and UsesPortStatistics from BULKIO objects. Updating REDHAWK REST to make connections, activeSRIs, UsesPortStatistics, and state available.
-* Adding wrapper methods to RedhawkApplication and RedhawkComponent interfaces for easier access to aware(), componentDevices(), componentProcessIds(), and componentImplementations(). REST responses for Component and Application now display componentDevice, aware, componentProcessId, and componentImplementation information.
-* Adding ability to get and set adminState from REDHAWK Driver and REDHAWK REST.  Adding ability to view usageState and operationalState from REDHAWK Driver and REDHAWK REST.
-* Adding ability to registerRemoteDomain, unregisterRemoteDomains, get device implementation information and a deviceConfiguration profile via REDHAWK Driver and REDHAWK REST.
-* Adding ability to preconfigure HTTPS and WSS, and adding documentation to explain this functionality in the Web Server Configuration section in the REDHAWK Enterprise Integration User Guide.
-* Adding a helper method to dynamically connect two Components; Improving methods used to set REDHAWK Properties; and Adding AllocationFactory to ease users' ability to generate allocations.
-* Adding functionality in REDHAWK REST and Websocket to support JAAS-based method level access.
-
-### Documentation
-* Adding a Connection Callbacks section to the REDHAWK Manual.
-* Updating the REDHAWK Manual with accessibility rules for all properties. Updating the REDHAWK ICD with the description of the new "property" kind.
-* Adding a Libraries chapter in the REDHAWK Manual to explain how to use shared libraries.
-* Adding documentation explaining how to use the Allocation Manager.
-
+* Adding a new packed bit data port type and data format for BulkIO:
+  * Port API for component developers is fully implemented in C++, Python, and Java.
+  * Plotting, monitoring, and interacting with data are supported in the IDE and Python Sandbox.
+  * For C++ and Python, a new `bitbuffer` class provides high-level access to packed bit data.
+  * In Python, all BulkIO ports now support a stream-based API that is consistent with C++.
+* Adding CF base class support and IDE tooling to allow users to create, implement, and test a FrontEnd scanner device.
+* Adding extensible hierarchical name structure support for loggers.
+* Correcting behavior for structures that have a default value that is mixed simple values and sequences; if the sequence is empty, it is not treated as nil.
+* Adding support for working with multi-out ports.
+* Adding Allocation Manager functionality in the IDE:  
+ * Viewing current allocations and allocation details for each allocation is supported.
+ * Searching for devices used for an allocation and Device Managers referenced by an allocation is supported.
+ * Allocations can be deallocated.
+* Adding context-sensitive property views in the REDHAWK IDE for the following:
+  * Waveform and node properties are displayed when selecting the respective runtime editor.  Runtime connection details are also displayed (read-only) when selecting a connection in a diagram editor.
+  * `SoftwareAssembly` and `DeviceConfiguration` properties are displayed when selecting the respective design-time editor. Design-time connection properties are displayed when selecting a connection in a diagram editor.
+* Providing better context-specific icons throughout the IDE, and updating images and text in the REDHAWK Manual to reflect these new icons.
+* Providing new functionality for interacting with event channels and message event ports.
+* Adding Connection Manager functionality in the IDE:
+ * Viewing current connections and connection details for each connection is supported.
+ * Searching for the source or target of a connection is supported.
+ * Connections can be disconnected.
+* Fixing an issue so when waveforms containing references to mistyped properties are launched, the IDE displays all the properties including the property that had a mis-matched override in the SAD file.
+* Adding validation for mistyped property refs.
+* Fixing the DomainManager's improperly defined scoped locks.
+* Implementing several C++ fixes to allow REDHAWK to compile on newer compilers.
+* Correcting default property kinds in the DTD and XSD so they are no longer out of sync with the behavior of the Core Framework and the ICD.
+* Adding new behavior to the C++ input stream API: It is now possible to "peek" into data sets that have reached EOS by setting consume to 0 when using read or tryread.
+* Adding support to custom IDL and FEI control ports so they now accept a connection id argument to specify the connection to use and throw exceptions if the port call is exercised and no connection exists or a connection is specified that does not exist.
+* Fixing an issue so when unhandled exceptions occur in Python and Java components, the components terminate rather than remain in a defunct state. If termination was not requested, the GPP now sends a message to the IDM channel when a component exits with a non-zero status.
+* Updating the FEI specification to require a device to only partially support a requested signal range rather than the whole signal to return a valid request. The `validateRequest` function in the `frontendInterfaces` support package checks that a partial overlap of the requested band succeeds rather than requiring full coverage of the requested range.
+* Patching omniORBpy to prevent possible segfaults in multithreaded code.
+* Updating the IDE on CentOS 7 to use the latest available Eclipse tooling, Eclipse Photon.
+* Correcting behavior so readonly property kind properties for devices and services can now be modified during deployment using Device Configuration Descriptor (dcd.xml) file.
+* Correcting a bad XML file in the SDRROOT that caused loading of the SDRROOT to stop and report an error.
+* Updating `rh.VITA49` to adhere to the approved version of V49.2 Standard (August 2017).
+* Adding an option for `MessageSupplierPort` to send messages to a specific connection.
+* Deprecating REDHAWK Enterprise Integration and removing all references to it within the documentation.
+* Providing the ability to generate configuration files for waveforms and nodes for use by the REDHAWK admin service.
+* Changing the `redhawk` user's home directory. When installing REDHAWK, the home directory is now `/var/redhawk`. When upgrading, the existing `redhawk` user home directory is updated to `/var/redhawk` if it is currently set to `/home/redhawk`.
+* Refactoring IO redirection to use epoll system call to handle redirection of component output to a single file and direct IO redirection when configured for one output file per component process.
+* Correcting behavior so when a component has a struct property with an element that is a complex sequence, the value can be overloaded correctly on a waveform.
 
 ## Copyrights
 This work is protected by Copyright. Please refer to the [Copyright File](COPYRIGHT) for updated copyright information.
