@@ -142,3 +142,6 @@
 [submodule "redhawk-devices/MSDD"]
 	path = redhawk-devices/MSDD
 	url = ../MSDD
+[submodule "redhawk-adminservice"]
+	path = redhawk-adminservice
+	url = ../adminservice.git
