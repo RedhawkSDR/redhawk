@@ -39,5 +39,4 @@
 	url = ../adminservice.git
 [submodule "redhawk-assets"]
 	path = redhawk-assets
-	url = git@git.vsi-corp.com:redhawk/assets.git
-	branch = master
+	url = ../assets.git
