@@ -31,9 +31,6 @@
 [submodule "redhawk-dependencies/omniEvents"]
 	path = redhawk-dependencies/omniEvents
 	url = ../omniEvents
-[submodule "redhawk-adminservice"]
-	path = redhawk-adminservice
-	url = ../adminservice.git
 [submodule "redhawk-assets"]
 	path = redhawk-assets
 	url = git://github.com/RedhawkSDR/assets
