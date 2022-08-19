@@ -33,7 +33,7 @@
 	url = ../omniEvents
 [submodule "redhawk-assets"]
 	path = redhawk-assets
-	url = git://github.com/RedhawkSDR/assets
+	url = ../assets.git
 [submodule "redhawk-core-framework"]
 	path = redhawk-core-framework
-	url = git://github.com/RedhawkSDR/core-framework
+	url = ../core-framework

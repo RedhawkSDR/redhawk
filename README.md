@@ -7,14 +7,15 @@ The REDHAWK integrated development environment (IDE) provides tools to support d
 
 ## Recent Announcements
 
-### **[Release of REDHAWK 2.2.8](https://github.com/redhawksdr/redhawk/releases/tag/2.2.8) (April 2021)**
-The effort in REDHAWK 2.2.8 focused on:
+### **[Release of REDHAWK 3.0.0](https://github.com/redhawksdr/redhawk/releases/tag/3.0.0) (February 2022)**
+The effort in REDHAWK 3.0.0 focused on:
 
-* EOS condition is reported correctly for all connections when an incoming stream receives an EOS flag.
-* Rate in header for zero-rate SDDS headers is ignored
-* Resolved issue when adding a new stream to an attachable port that would cause a program to segfault.
-* Exiting a python sandbox session will now properly terminate a resource's processes started during the session that threw  `initialization` exceptions.
-
+* A major update to FrontEnd Interfaces.
+* Support for running Components in Docker containers.
+* Convert the Core Framework and the Assets to use C++ 14.
+* Convert the Core Framework and the Assets to use Python 3.
+* Convert the Core Framework to use Java 11.
+* Bundle the Manual with the Core Framework.
 
 ## Copyrights
 This work is protected by Copyright. Please refer to the [Copyright File](COPYRIGHT) for updated copyright information.
