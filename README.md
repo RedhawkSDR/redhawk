@@ -7,15 +7,10 @@ The REDHAWK integrated development environment (IDE) provides tools to support d
 
 ## Recent Announcements
 
-### **[Release of REDHAWK 3.0.0](https://github.com/redhawksdr/redhawk/releases/tag/3.0.0) (February 2022)**
-The effort in REDHAWK 3.0.0 focused on:
+### **[Release of REDHAWK 2.2.9](https://github.com/redhawksdr/redhawk/releases/tag/2.2.9) (August 2022)**
+The effort in REDHAWK 2.2.9 focused on:
 
-* A major update to FrontEnd Interfaces.
-* Support for running Components in Docker containers.
-* Convert the Core Framework and the Assets to use C++ 14.
-* Convert the Core Framework and the Assets to use Python 3.
-* Convert the Core Framework to use Java 11.
-* Bundle the Manual with the Core Framework.
+* Replace log4j with reload4j in the Core Framework and in the IDE. 
 
 ## Copyrights
 This work is protected by Copyright. Please refer to the [Copyright File](COPYRIGHT) for updated copyright information.
