@@ -19,9 +19,6 @@
 [submodule "redhawk-dependencies/librtlsdr"]
 	path = redhawk-dependencies/librtlsdr
 	url = ../librtlsdr.git
-[submodule "redhawk-ide/redhawk-ide-uitests"]
-	path = redhawk-ide/redhawk-ide-uitests
-	url = ../redhawk-ide-uitests
 [submodule "redhawk-ide/mvn-parent"]
 	path = redhawk-ide/mvn-parent
 	url = ../mvn-parent
