@@ -7,8 +7,8 @@ The REDHAWK integrated development environment (IDE) provides tools to support d
 
 ## Recent Announcements
 
-### **[Release of REDHAWK 2.2.9](https://github.com/redhawksdr/redhawk/releases/tag/2.2.9) (August 2022)**
-The effort in REDHAWK 2.2.9 focused on:
+### **[Release of REDHAWK 2.3.1](https://github.com/redhawksdr/redhawk/releases/tag/2.3.1) (August 2022)**
+The effort in REDHAWK 2.3.1 focused on:
 
 * Replace log4j with reload4j in the Core Framework and in the IDE. 
 
