@@ -7,10 +7,12 @@ The REDHAWK integrated development environment (IDE) provides tools to support d
 
 ## Recent Announcements
 
-### **[Release of REDHAWK 2.3.1](https://github.com/redhawksdr/redhawk/releases/tag/2.3.1) (August 2022)**
-The effort in REDHAWK 2.3.1 focused on:
+### **[Release of REDHAWK 3.0.1](https://github.com/redhawksdr/redhawk/releases/tag/3.0.1) (September 2022)**
+The effort in REDHAWK 3.0.1 focused on:
 
-* Replace log4j with reload4j in the Core Framework and in the IDE. 
+* Replace log4j with reload4j in the Core Framework and in the IDE.
+* Resolved bug preventing fei3-generator from generating python code
+* Resolved bug preventing IDE from connecting to a running redhawk-3.0.0 domain
 
 ## Copyrights
 This work is protected by Copyright. Please refer to the [Copyright File](COPYRIGHT) for updated copyright information.
