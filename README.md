@@ -7,12 +7,13 @@ The REDHAWK integrated development environment (IDE) provides tools to support d
 
 ## Recent Announcements
 
-### **[Release of REDHAWK 3.0.1](https://github.com/redhawksdr/redhawk/releases/tag/3.0.1) (September 2022)**
-The effort in REDHAWK 3.0.1 focused on:
+### **[Release of REDHAWK 2.2.10](https://github.com/redhawksdr/redhawk/releases/tag/2.2.10) (February 2023)**
+The effort in REDHAWK 2.2.10 focused on:
 
-* Replace log4j with reload4j in the Core Framework and in the IDE.
-* Resolved bug preventing fei3-generator from generating python code
-* Resolved bug preventing IDE from connecting to a running redhawk-3.0.0 domain
+* Fixed some problems with the Python sandbox:
+** PRFs are no longer invalid when the kind-type is not specified for some properties.
+** External properties via command line are now properly passed to launch components.
+* Fixed problem with EPEL overriding required OmniOrb version. The correct version should now be installed.
 
 ## Copyrights
 This work is protected by Copyright. Please refer to the [Copyright File](COPYRIGHT) for updated copyright information.
