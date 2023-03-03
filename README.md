@@ -7,8 +7,8 @@ The REDHAWK integrated development environment (IDE) provides tools to support d
 
 ## Recent Announcements
 
-### **[Release of REDHAWK 2.2.10](https://github.com/redhawksdr/redhawk/releases/tag/2.2.10) (February 2023)**
-The effort in REDHAWK 2.2.10 focused on:
+### **[Release of REDHAWK 2.3.2](https://github.com/redhawksdr/redhawk/releases/tag/2.3.2) (February 2023)**
+The effort in REDHAWK 2.3.2 focused on:
 
 * Fixed some problems with the Python sandbox:
 ** PRFs are no longer invalid when the kind-type is not specified for some properties.
