@@ -7,14 +7,13 @@ The REDHAWK integrated development environment (IDE) provides tools to support d
 
 ## Recent Announcements
 
-### **[Release of REDHAWK 2.2.8](https://github.com/redhawksdr/redhawk/releases/tag/2.2.8) (April 2021)**
-The effort in REDHAWK 2.2.8 focused on:
+### **[Release of REDHAWK 2.3.2](https://github.com/redhawksdr/redhawk/releases/tag/2.3.2) (February 2023)**
+The effort in REDHAWK 2.3.2 focused on:
 
-* EOS condition is reported correctly for all connections when an incoming stream receives an EOS flag.
-* Rate in header for zero-rate SDDS headers is ignored
-* Resolved issue when adding a new stream to an attachable port that would cause a program to segfault.
-* Exiting a python sandbox session will now properly terminate a resource's processes started during the session that threw  `initialization` exceptions.
-
+* Fixed some problems with the Python sandbox:
+** PRFs are no longer invalid when the kind-type is not specified for some properties.
+** External properties via command line are now properly passed to launch components.
+* Fixed problem with EPEL overriding required OmniOrb version. The correct version should now be installed.
 
 ## Copyrights
 This work is protected by Copyright. Please refer to the [Copyright File](COPYRIGHT) for updated copyright information.

@@ -19,9 +19,6 @@
 [submodule "redhawk-dependencies/librtlsdr"]
 	path = redhawk-dependencies/librtlsdr
 	url = ../librtlsdr.git
-[submodule "redhawk-ide/redhawk-ide-uitests"]
-	path = redhawk-ide/redhawk-ide-uitests
-	url = ../redhawk-ide-uitests
 [submodule "redhawk-ide/mvn-parent"]
 	path = redhawk-ide/mvn-parent
 	url = ../mvn-parent
@@ -31,12 +28,9 @@
 [submodule "redhawk-dependencies/omniEvents"]
 	path = redhawk-dependencies/omniEvents
 	url = ../omniEvents
-[submodule "redhawk-adminservice"]
-	path = redhawk-adminservice
-	url = ../adminservice.git
 [submodule "redhawk-assets"]
 	path = redhawk-assets
-	url = git://github.com/RedhawkSDR/assets
+	url = ../assets.git
 [submodule "redhawk-core-framework"]
 	path = redhawk-core-framework
-	url = git://github.com/RedhawkSDR/core-framework
+	url = ../core-framework
