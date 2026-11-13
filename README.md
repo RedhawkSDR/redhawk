@@ -7,7 +7,8 @@ REDHAWK is a software-defined radio (SDR) framework designed to support the deve
 ### **Release of REDHAWK 4.0.4 (November 2026)**
 The effort in REDHAWK 4.0.4 focused on:
 
-- Source-only release (Dockerfile included to build rpm)
+- Source-only release
+  - Dockerfile included to build rpm
 - Focused on shifting release to newer OS/languages
   - Rocky 9
   - C++ 17
