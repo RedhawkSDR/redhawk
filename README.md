@@ -8,11 +8,11 @@ REDHAWK is a software-defined radio (SDR) framework designed to support the deve
 The effort in REDHAWK 4.0.4 focused on:
 
 - Source-only release (Dockerfile included to build rpm)
-- Focused on shifting release to newer platform/languages
- - Rocky 9
- - C++ 17
- - Python 3.9
- - Java 21
+- Focused on shifting release to newer OS/languages
+  - Rocky 9
+  - C++ 17
+  - Python 3.9
+  - Java 21
 - Based on REDHAWK 2.2 LTS
 
 ## Copyrights
