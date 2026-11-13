@@ -34,3 +34,6 @@
 [submodule "redhawk-core-framework"]
 	path = redhawk-core-framework
 	url = ../core-framework
+[submodule "redhawk-adminservice"]
+	path = redhawk-adminservice
+	url = https://github.com/RedhawkSDR/adminservice
